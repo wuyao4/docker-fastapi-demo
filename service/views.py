@@ -8,14 +8,20 @@ from models.posts import posts
 router = APIRouter()
 
 
+# @router.get('/')
+# async def index(request: Request):
+#     print(posts.select())
+#     post_list = await database.fetch_all(query=posts.select())
+#     return templates.TemplateResponse(
+#         'index.html',
+#         {
+#             'request': request,
+#             'post_list': post_list
+#         }
+#     )
+
 @router.get('/')
-async def index(request: Request):
-    print(posts.select())
-    post_list = await database.fetch_all(query=posts.select())
+async def index():
     return templates.TemplateResponse(
-        'index.html',
-        {
-            'request': request,
-            'post_list': post_list
-        }
+        'index.html'
     )
