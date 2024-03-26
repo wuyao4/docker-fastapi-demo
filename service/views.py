@@ -19,5 +19,3 @@ async def index(request: Request):
             'post_list': post_list
         }
     )
-
-
